@@ -4,6 +4,7 @@ var audioList = [
     './musics/six.mp3',
     './musics/two.mp3',
     './musics/seven.mp3',
+    './musics/six.mp3',
     './musics/six.mp3'
 ];
 
