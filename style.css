@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Concert One;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100dvh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr 7vh;
+
+}
+
+nav {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 4, 184, 255);
+    align-items: center;
+    border: .11vw solid #000;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    gap: 1.39vw;
+}
+
+.menu li {
+    float: left;
+    list-style: none;
+}
+
+.menu li a {
+    font-size: 2.7vw;
+    font-weight: 400;
+    padding: 0 2vw;
+}
+
+/* main-content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10vh;
+    width: 100%;
+    height: 100%;
+}
+
+/* .audio-icon{ */
+.audio-icon {
+    display: flex;
+    background: rgba(124, 3, 140, 255);
+    border: .11vw solid #000;
+}
+
+.img-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    position: absolute;
+    width: 80%;
+}
+
+.img1 {
+    animation: mymove 1s infinite ease;
+}
+
+@keyframes mymove {
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+.img2 {
+    animation: mymove2 1s infinite ease;
+}
+
+@keyframes mymove2 {
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* .audio-lists{ */
+.audio-lists {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 5% 95%;
+    background: rgba(192, 3, 217, 255);
+    padding: 1.39vw;
+    grid-gap: 1.39vw;
+    border: .11vw solid #000;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1.39vw;
+}
+
+.heading img {
+    height: 90%;
+}
+
+.headingTxt {
+    font-size: 2.7vw;
+}
+
+.list-container {
+    display: grid;
+    height: 54vh;
+    align-content: baseline;
+    border: .11vw solid #000;
+    overflow-y: scroll;
+}
+
+.list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7vw .83vw;
+    cursor: pointer;
+}
+
+.list h3 {
+    font-size: 2.22vw;
+    color: white;
+    letter-spacing: .13vw;
+}
+
+.list:hover h3 {
+    color: rgb(222, 219, 219);
+}
+
+.list img {
+    width: 3.9vw;
+}
+
+/* .audio-control{ */
+.audio-control {
+    grid-column: span 2;
+    display: grid;
+    padding: 0 3vw;
+    grid-template-columns: 7vw 1fr 5vw;
+    border: .11vw solid #000;
+    background: rgba(162, 4, 184, 255);
+    align-items: center;
+    grid-gap: 3vw;
+}
+
+.playBtnDesign {
+    padding: .7vw 1.11vw;
+    font-size: 1.39vw;
+    /* clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%); */
+    border: .11vw solid black;
+    box-shadow: -.56vw .56vw 0 0 black;
+    transform: rotate(-2deg) skew(2deg);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.progress {
+    width: 100%;
+    height: 2.1vw;
+    background: white;
+    border: .11vw solid black;
+    border: .11vw solid black;
+    box-shadow: .56vw .56vw 0 0 black;
+    transform: rotate(0deg) skew(2deg);
+    transition: .5s;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+}
+
+.footer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(184, 3, 208, 255);
+    border: .11vw solid #000;
+    gap: 1.1vw;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 1.1vw;
+    font-size: 1.66vw;
+}
+
+.footer-icon {
+    display: flex;
+    gap: 1.1vw;
+    height: 100%;
+    align-items: center;
+
+}
+
+.footer-icon img {
+    width: .83vw;
+}
+
+
+.mutedSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.mutedSection img {
+    width: 4.21vw;
+    cursor: pointer;
+}
+
+.micIcon {
+    cursor: pointer;
+    display: none;
+}
+
+.micIconTwo {
+    cursor: pointer;
+}

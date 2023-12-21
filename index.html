@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alex+Brush&family=Alfa+Slab+One&family=Allura&family=Antonio:wght@400;600;700&family=Architects+Daughter&family=Archivo+Black&family=Audiowide&family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Bangers&family=Bungee&family=Concert+One&family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,600&family=Great+Vibes&family=Hammersmith+One&family=Homemade+Apple&family=Kaushan+Script&family=Kolker+Brush&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&family=Luckiest+Guy&family=Michroma&family=Monoton&family=Montserrat:wght@400;500;600;700;800;900&family=Mr+Dafoe&family=Mulish:wght@400;600;900&family=My+Soul&family=Oleo+Script:wght@400;700&family=Orbitron:wght@400;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Parisienne&family=Passion+One:wght@400;700;900&family=Patua+One&family=Playball&family=Poiret+One&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&family=Rock+Salt&family=Rubik+Dirt&family=Rubik+Distressed&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=Rubik+Mono+One&family=Russo+One&family=Shrikhand&family=Special+Elite&family=Staatliches&family=Style+Script&family=Tangerine:wght@400;700&family=Teko:wght@400;500;600;700&family=Ultra&family=Viga&family=Yellowtail&display=swap"
+        rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alex+Brush&family=Alfa+Slab+One&family=Allura&family=Antonio:wght@400;600;700&family=Architects+Daughter&family=Archivo+Black&family=Audiowide&family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Bangers&family=Bungee&family=Concert+One&family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,600&family=Great+Vibes&family=Hammersmith+One&family=Homemade+Apple&family=Kaushan+Script&family=Kolker+Brush&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&family=Luckiest+Guy&family=Michroma&family=Monoton&family=Montserrat:wght@400;500;600;700;800;900&family=Mr+Dafoe&family=Mulish:wght@400;600;900&family=My+Soul&family=Oleo+Script:wght@400;700&family=Orbitron:wght@400;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Parisienne&family=Passion+One:wght@400;700;900&family=Patua+One&family=Playball&family=Poiret+One&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&family=Rock+Salt&family=Rubik+Dirt&family=Rubik+Distressed&family=Rubik+Glitch&family=Rubik+Marker+Hatch&family=Rubik+Mono+One&family=Russo+One&family=Shrikhand&family=Special+Elite&family=Staatliches&family=Style+Script&family=Tangerine:wght@400;700&family=Teko:wght@400;500;600;700&family=Ultra&family=Viga&family=Yellowtail&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!--body-->
+        <div class="main-content">
+            <div class="audio-icon">
+                <div id="audioSpear" class="playBtn img-container">
+                    <img id="audioSpearImage1" src="./image/spear-right.svg" alt="" />
+                    <img id="audioSpearImage2" src="./image/spear-top.svg" alt="" />
+                </div>
+            </div>
+
+            <!-- audio-lists -->
+            <div class="audio-lists">
+                <div class="heading">
+                    <img src="./image/folder-icon.svg" alt="folder icon" />
+                    <h2 class="headingTxt">Audio Files</h2>
+                </div>
+                <div class="list-container">
+                    <div class="list play-button" onclick="playPauseAudio(0)">
+                        <h3>Audio File 1</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(1)">
+                        <h3>Audio File 2</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(2)">
+                        <h3>Audio File 3</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(3)">
+                        <h3>Audio File 4</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(4)">
+                        <h3>Audio File 5</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(5)">
+                        <h3>Audio File 6</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                    <div class="list play-button" onclick="playPauseAudio(6)">
+                        <h3>Audio File 7</h3>
+                        <img src="./image/audio-right-icon.svg" alt="list of audio" />
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- audio-control -->
+            <div class="audio-control">
+                <audio id="audio">
+                    <source src="./musics/four.mp3" type="audio/mpeg" />
+                </audio>
+                <div class="controls">
+                    <button id="playBtn" class="playBtn playBtnDesign">Play/Pause</button>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <div class="mutedSect">
+                    <img class="micIcon" id="micIconMute" src="./image/volum-icon.svg" alt="mute image">
+                    <img class="micIconTwo" id="micIconOn" src="./image/volOn.svg" alt="mute image">
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <ul class="footer-menu">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Copyright</a></li>
+            </ul>
+            <ul class="footer-icon">
+                <li>
+                    <a href="#"><img src="./image/facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./image/instagram.png" alt="instagram" /></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
