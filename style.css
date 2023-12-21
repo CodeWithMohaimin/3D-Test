@@ -119,7 +119,7 @@ nav {
 }
 
 .heading img {
-    height: 90%;
+    height: 3vw;
 }
 
 .headingTxt {
@@ -231,8 +231,8 @@ nav {
 
 
 .mutedSection img {
-    width: 5.5vh;
-    height: 5.5vh;
+    width: 8.17vh;
+    height: 8.17vh;
     cursor: pointer;
 }
 
