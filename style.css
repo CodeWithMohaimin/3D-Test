@@ -185,7 +185,7 @@ nav {
 
 .progress {
     width: 100%;
-    height: 2.1vw;
+    height: 3vh;
     background: white;
     border: .11vw solid black;
     border: .11vw solid black;
@@ -230,15 +230,9 @@ nav {
 }
 
 
-.mutedSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-}
-
 .mutedSection img {
-    width: 4.21vw;
+    width: 5.5vh;
+    height: 5.5vh;
     cursor: pointer;
 }
 
