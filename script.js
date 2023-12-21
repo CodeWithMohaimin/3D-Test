@@ -1,13 +1,10 @@
 var audioList = [
-    '../musics/two.mp3',
-    '../musics/seven.mp3',
-    '../musics/six.mp3',
-    '../musics/four.mp3',
-    '../musics/two.mp3',
-    '../musics/seven.mp3',
-    '../musics/six.mp3',
-    '../musics/four.mp3'
-    // Add more audio files as needed
+    './musics/four.mp3',
+    './musics/seven.mp3',
+    './musics/six.mp3',
+    './musics/two.mp3',
+    './musics/seven.mp3',
+    './musics/six.mp3'
 ];
 
 var currentIndex = 1;
@@ -15,12 +12,7 @@ var audio = new Audio();
 var isPlaying = false;
 var resumeTime = 0;
 
-var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-var audioSource = audioContext.createMediaElementSource(audio);
-var gainNode = audioContext.createGain();
-
-audioSource.connect(gainNode);
-gainNode.connect(audioContext.destination);
+// ... (rest of your code) ...
 
 function playPauseAudio(index) {
     if (index === currentIndex) {
@@ -31,72 +23,54 @@ function playPauseAudio(index) {
     }
 }
 
-
-
-
-
-
-const audioSpearImage1 = document.getElementById('audioSpearImage1')
-const audioSpearImage2 = document.getElementById('audioSpearImage2')
+const audioSpearImage1 = document.getElementById('audioSpearImage1');
+const audioSpearImage2 = document.getElementById('audioSpearImage2');
 
 audioSpearImage1.addEventListener('click', () => {
     togglePlayPause();
-})
+});
+
 audioSpearImage2.addEventListener('click', () => {
     togglePlayPause();
-})
+});
 
 function playAudio(audioFile) {
     audio.src = audioFile;
     if (resumeTime > 0) {
         audio.currentTime = resumeTime;
     }
-    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-    gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 1); // Adjust the duration as needed
     audio.play();
     isPlaying = true;
 
     // When play music then moving the images
-    audioSpearImage1.classList.add('img1')
-    audioSpearImage2.classList.add('img2')
-
+    audioSpearImage1.classList.add('img1');
+    audioSpearImage2.classList.add('img2');
 }
 
 function pauseAudio() {
-    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 1); // Adjust the duration as needed
     isPlaying = false;
     resumeTime = audio.currentTime;
-    setTimeout(() => {
-        audio.pause();
-    }, 1000);
+    audio.pause();
 
     // When stop music then moving stop the images
-
-    audioSpearImage1.classList.remove('img1')
-    audioSpearImage2.classList.remove('img2')
+    audioSpearImage1.classList.remove('img1');
+    audioSpearImage2.classList.remove('img2');
 }
-
 
 function togglePlayPause() {
     if (isPlaying) {
         pauseAudio();
-
     } else {
         playAudio(audioList[currentIndex]);
-
     }
-
 }
 
-// when button click 
+// when button click
 const playBtn = document.getElementById('playBtn');
 
 playBtn.addEventListener('click', () => {
     togglePlayPause();
 });
-
-
-
 
 // Progress bar and the Volume button
 
@@ -119,7 +93,7 @@ function resetProgressBar() {
 }
 
 function setVolume(volume) {
-    gainNode.gain.setValueAtTime(volume / 100, audioContext.currentTime);
+    audio.volume = volume / 100;
 }
 
 function adjustProgress(event) {
@@ -134,11 +108,7 @@ function adjustProgress(event) {
     updateProgressBar(); // Update the progress bar immediately
 }
 
-
-
-
-
-// Mute and Unmute 
+// Mute and Unmute
 
 const micIconOn = document.getElementById('micIconOn');
 const micIconMute = document.getElementById('micIconMute');
@@ -157,4 +127,3 @@ function unmuteAudio() {
     micIconMute.style.display = 'none';
     audio.muted = false;
 }
-
